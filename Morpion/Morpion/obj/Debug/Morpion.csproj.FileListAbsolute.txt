@@ -1,0 +1,6 @@
+C:\Users\tysma\OneDrive\Bureau\MorpionBTS_\MorpionBTS_SIO\Morpion\Morpion\obj\Debug\Morpion.csprojResolveAssemblyReference.cache
+C:\Users\tysma\OneDrive\Bureau\MorpionBTS_\MorpionBTS_SIO\Morpion\Morpion\bin\Debug\Morpion.exe.config
+C:\Users\tysma\OneDrive\Bureau\MorpionBTS_\MorpionBTS_SIO\Morpion\Morpion\bin\Debug\Morpion.exe
+C:\Users\tysma\OneDrive\Bureau\MorpionBTS_\MorpionBTS_SIO\Morpion\Morpion\bin\Debug\Morpion.pdb
+C:\Users\tysma\OneDrive\Bureau\MorpionBTS_\MorpionBTS_SIO\Morpion\Morpion\obj\Debug\Morpion.exe
+C:\Users\tysma\OneDrive\Bureau\MorpionBTS_\MorpionBTS_SIO\Morpion\Morpion\obj\Debug\Morpion.pdb
