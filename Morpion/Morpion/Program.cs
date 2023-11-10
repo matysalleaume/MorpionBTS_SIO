@@ -11,20 +11,22 @@ namespace Morpion
         // Fonction permettant l'affichage du Morpion
         public static void AfficherMorpion(int j, int k)
         {
-        	for ( j = 0; j < grille.GetLength(0); j++)
+        	
+        	
+        	for (j = 0; j < grille.GetLength(0); j++)
             {
                 Console.Write("\n|====|====|====|\n");
                 Console.Write("|");
-                for ( k = 0; k < grille.GetLength(1); k++)
+                for (k = 0; k < grille.GetLength(1); k++)
                 {
-                    Console.Write(" -- ");
-                    Console.Write("|");
+                	
+                    Console.Write (" -- ");
+                    Console.Write ("|");
                 }
-                
             }
-            Console.Write("\n|====|====|====|");
-
-
+                
+        Console.Write("\n|====|====|====|\n");
+        
         }
 
         // Fonction permettant de changer
@@ -35,7 +37,11 @@ namespace Morpion
         // n'est pas déjà jouée
         public static bool AJouer(int j, int k, int joueur)
         {
-            // A compléter 
+            if (j >= 0 && j < grille.GetLength(0) && k >= 0 && k < grille.GetLength(1) && grille[j, k] == 10)
+            {
+                grille[j, k] = joueur;
+                return true;
+            }
             return false;
         }
 
@@ -43,7 +49,44 @@ namespace Morpion
         // si un joueur à gagner
         public static bool Gagner(int l, int c, int joueur)
         {
-            // A compléter 
+             for (int i = 0; i < grille.GetLength(0); i++)
+            {
+                if (grille[i, c] != joueur)
+                    break;
+                if (i == grille.GetLength(0) - 1)
+                    return true;
+            }
+
+            for (int i = 0; i < grille.GetLength(1); i++)
+            {
+                if (grille[l, i] != joueur)
+                    break;
+                if (i == grille.GetLength(1) - 1)
+                    return true;
+            }
+
+            if (l == c)
+            {
+                for (int i = 0; i < grille.GetLength(0); i++)
+                {
+                    if (grille[i, i] != joueur)
+                        break;
+                    if (i == grille.GetLength(0) - 1)
+                        return true;
+                }
+            }
+
+            if (l + c == grille.GetLength(0) - 1)
+            {
+                for (int i = 0; i < grille.GetLength(0); i++)
+                {
+                    if (grille[i, (grille.GetLength(0) - 1) - i] != joueur)
+                        break;
+                    if (i == grille.GetLength(0) - 1)
+                        return true;
+                }
+            }
+
             return false;
         }
 
@@ -69,7 +112,7 @@ namespace Morpion
 					while(!gagner && essais != 9)
 					{
 
-						// A compléter 
+						AfficherMorpion(j,k);
 						try
 						{
 							Console.WriteLine("Ligne   =    ");
