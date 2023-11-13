@@ -19,8 +19,19 @@ namespace Morpion
                 Console.Write("|");
                 for (k = 0; k < grille.GetLength(1); k++)
                 {
-                	
-                    Console.Write (" -- ");
+                	if (grille[j,k]==1)
+                	{
+                		Console.Write("O");
+                	}
+                	if (grille[j,k]==2)
+                	{
+                		Console.Write("X");
+                	}
+                	if (grille[j,k]==10)
+                	{
+                		Console.Write (" -- ");	
+                	}
+                    
                     Console.Write ("|");
                 }
             }
@@ -124,7 +135,7 @@ namespace Morpion
 							Console.SetCursorPosition(LigneDébut + 10, ColonneDébut + 10); // Permet de manipuler le curseur dans la fenêtre 
 							c = int.Parse(Console.ReadLine()) - 1;
 
-							// A compléter 
+							bonnePosition = AJouer(l, c, joueur);
 
 						}
 						catch (Exception e)
